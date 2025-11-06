@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Study & Quiz</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📖 Bible Study</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <nav>
+    <button data-view="reader">Reader</button>
+    <button data-view="search">Search</button>
+    <button data-view="bookmarks">Bookmarks</button>
+    <button data-view="quiz">Quiz</button>
+  </nav>
+
+  <main id="app"></main>
+
+  <script src="script.js"></script>
+  
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
