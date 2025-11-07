@@ -12,15 +12,18 @@
 <body>
   <header>
     <h1>📖 Bible Study</h1>
-    <h2>By Stanley Bagambisa</h2>
     <button id="themeToggle">🌙</button>
   </header>
+  <div class="author"><h2>King James Version</h2></div>
 
   <nav>
     <button data-view="reader">Reader</button>
     <button data-view="search">Search</button>
     <button data-view="bookmarks">Bookmarks</button>
     <button data-view="quiz">Quiz</button>
+    <button id="installBtn" style="display:none; margin:1rem auto; padding:1rem; background:#1a1a1a; color:white; border:none; border-radius:8px; font-size:1rem;">
+  Install Bible App
+</button>
   </nav>
 
   <main id="app"></main>
