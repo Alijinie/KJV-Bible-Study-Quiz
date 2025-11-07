@@ -368,25 +368,8 @@ async function initializeApp() {
       });
   }
 }
-// PWA Install Prompt
-let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById('installBtn').style.display = 'block';
-});
-
-document.getElementById('installBtn').addEventListener('click', () => {
-  document.getElementById('installBtn').style.display = 'none';
-  deferredPrompt.prompt();
-  deferredPrompt.userChoice.then((choice) => {
-    if (choice.outcome === 'accepted') {
-      console.log('User installed the PWA');
-    }
-    deferredPrompt = null;
-  });
-});
 
 // Run the app!
+
 initializeApp();
